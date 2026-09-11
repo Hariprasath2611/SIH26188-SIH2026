@@ -31,7 +31,7 @@ export function StatCard({ title, value, icon: Icon, color = 'cyan', subtitle })
         <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: 500 }}>
           {title}
         </div>
-        <div style={{ fontSize: '1.75rem', fontWeight: 800, color: '#fff', marginTop: '0.1rem' }}>
+        <div style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--text-main)', marginTop: '0.1rem' }}>
           {value}
         </div>
         {subtitle && (

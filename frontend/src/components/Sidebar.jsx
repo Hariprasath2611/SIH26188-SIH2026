@@ -15,7 +15,7 @@ export default function Sidebar() {
     <aside style={{
       width: '240px',
       borderRight: '1px solid var(--border-color)',
-      background: 'rgba(15, 23, 42, 0.6)',
+      background: 'var(--bg-card)',
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'space-between',
@@ -49,7 +49,7 @@ export default function Sidebar() {
                 fontSize: '0.9rem',
                 fontWeight: isActive ? 600 : 500,
                 color: isActive ? 'var(--primary-cyan)' : 'var(--text-muted)',
-                background: isActive ? 'rgba(0, 242, 254, 0.08)' : 'transparent',
+                background: isActive ? 'rgba(2, 132, 199, 0.1)' : 'transparent',
                 borderLeft: isActive ? '3px solid var(--primary-cyan)' : '3px solid transparent',
                 transition: 'all 0.2s ease'
               })}
