@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Shield, Lock, User, Key, CheckCircle2, ArrowRight } from 'lucide-react';
 
-export default function Login({ onLoginSuccess }) {
+export default function Login({ onLoginSuccess, theme, onToggleTheme }) {
   const [officerId, setOfficerId] = useState('OFFICER-7892');
   const [password, setPassword] = useState('password123');
   const [loading, setLoading] = useState(false);
@@ -42,9 +42,30 @@ export default function Login({ onLoginSuccess }) {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      background: 'radial-gradient(circle at 50% 30%, rgba(0, 242, 254, 0.08) 0%, transparent 60%), #070a12',
-      padding: '2rem'
+      background: 'var(--bg-dark)',
+      padding: '2rem',
+      position: 'relative'
     }}>
+      {onToggleTheme && (
+        <button
+          onClick={onToggleTheme}
+          title="Toggle Theme"
+          style={{
+            position: 'absolute',
+            top: '1.5rem',
+            right: '1.5rem',
+            background: 'var(--bg-card)',
+            border: '1px solid var(--border-color)',
+            color: 'var(--primary-cyan)',
+            padding: '0.6rem',
+            borderRadius: '8px',
+            cursor: 'pointer'
+          }}
+        >
+          {theme === 'light' ? '🌙 Dark Mode' : '☀️ Light Mode'}
+        </button>
+      )}
+
       <div className="cyber-card glow" style={{ maxWidth: '440px', width: '100%', padding: '2.5rem' }}>
         {/* Header */}
         <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
@@ -52,17 +73,17 @@ export default function Login({ onLoginSuccess }) {
             width: '56px',
             height: '56px',
             borderRadius: '16px',
-            background: 'linear-gradient(135deg, #00f2fe 0%, #3b82f6 100%)',
+            background: 'linear-gradient(135deg, #0284c7 0%, #2563eb 100%)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             margin: '0 auto 1.25rem auto',
-            boxShadow: '0 0 25px rgba(0, 242, 254, 0.4)'
+            boxShadow: '0 0 25px rgba(2, 132, 199, 0.4)'
           }}>
-            <Shield size={32} color="#040914" />
+            <Shield size={32} color="#ffffff" />
           </div>
 
-          <h1 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#fff', letterSpacing: '-0.02em' }}>
+          <h1 style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--text-main)', letterSpacing: '-0.02em' }}>
             IDShield <span style={{ color: 'var(--primary-cyan)' }}>AI</span>
           </h1>
           <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '0.25rem' }}>
