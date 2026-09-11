@@ -17,7 +17,7 @@ export function UploadBox({ title, subtitle, onFileSelect, previewUrl, onSelectP
 
   return (
     <div className="cyber-card" style={{ textAlign: 'center' }}>
-      <div style={{ fontSize: '1.05rem', fontWeight: 700, color: '#fff', marginBottom: '0.25rem' }}>
+      <div style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--text-main)', marginBottom: '0.25rem' }}>
         {title}
       </div>
       <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginBottom: '1rem' }}>
@@ -66,7 +66,7 @@ export function UploadBox({ title, subtitle, onFileSelect, previewUrl, onSelectP
         ) : (
           <div>
             <Upload size={36} color="var(--primary-cyan)" style={{ marginBottom: '0.5rem' }} />
-            <div style={{ fontSize: '0.9rem', fontWeight: 600, color: '#fff' }}>
+            <div style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--text-main)' }}>
               Drag & Drop Image Here
             </div>
             <div style={{ fontSize: '0.75rem', color: 'var(--text-dim)', marginTop: '0.25rem' }}>

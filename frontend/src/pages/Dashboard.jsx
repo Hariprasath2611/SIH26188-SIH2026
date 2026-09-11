@@ -73,7 +73,7 @@ export default function Dashboard() {
         {/* Recent Screenings Table */}
         <div className="cyber-card">
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.25rem' }}>
-            <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: '#fff' }}>
+            <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--text-main)' }}>
               Recent Identity Screenings
             </h3>
             <button className="btn btn-secondary" style={{ fontSize: '0.8rem' }} onClick={() => navigate('/history')}>
@@ -148,7 +148,7 @@ export default function Dashboard() {
         {/* Sidebar Quick Actions & Risk Distribution */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
           <div className="cyber-card">
-            <h4 style={{ fontSize: '0.95rem', fontWeight: 700, color: '#fff', marginBottom: '1rem' }}>
+            <h4 style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--text-main)', marginBottom: '1rem' }}>
               Risk Distribution Breakdown
             </h4>
 
