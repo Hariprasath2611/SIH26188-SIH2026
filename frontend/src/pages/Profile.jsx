@@ -40,7 +40,7 @@ export default function Profile({ user }) {
             </div>
 
             <div>
-              <h2 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#fff' }}>{officer.name}</h2>
+              <h2 style={{ fontSize: '1.4rem', fontWeight: 800, color: 'var(--text-main)' }}>{officer.name}</h2>
               <div style={{ fontSize: '0.9rem', color: 'var(--primary-cyan)', fontWeight: 600 }}>
                 {officer.role}
               </div>
@@ -53,7 +53,7 @@ export default function Profile({ user }) {
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
             <div>
               <div style={{ fontSize: '0.75rem', color: 'var(--text-dim)', textTransform: 'uppercase' }}>Department</div>
-              <div style={{ fontSize: '0.95rem', fontWeight: 600, color: '#fff', marginTop: '0.25rem' }}>
+              <div style={{ fontSize: '0.95rem', fontWeight: 600, color: 'var(--text-main)', marginTop: '0.25rem' }}>
                 {officer.department}
               </div>
             </div>

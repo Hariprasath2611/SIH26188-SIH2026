@@ -70,7 +70,7 @@ export default function BlockchainAudit() {
         </div>
         <div>
           <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Smart Contract</div>
-          <div style={{ fontSize: '0.9rem', fontWeight: 600, color: '#fff', marginTop: '0.2rem', fontFamily: 'var(--font-mono)' }}>
+          <div style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--text-main)', marginTop: '0.2rem', fontFamily: 'var(--font-mono)' }}>
             AuditLedger.sol (0x5FbD...923F)
           </div>
         </div>
@@ -82,7 +82,7 @@ export default function BlockchainAudit() {
         </div>
         <div>
           <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Total Immutable Blocks</div>
-          <div style={{ fontSize: '1.25rem', fontWeight: 900, color: '#fff', marginTop: '0.2rem' }}>
+          <div style={{ fontSize: '1.25rem', fontWeight: 900, color: 'var(--text-main)', marginTop: '0.2rem' }}>
             {ledger.length} Records
           </div>
         </div>
@@ -102,7 +102,7 @@ export default function BlockchainAudit() {
 
           <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)' }}>
             <div>RECORD HASH: <span style={{ color: 'var(--primary-cyan)' }}>{verificationResult.record_hash}</span></div>
-            <div>TRANSACTION HASH: <span style={{ color: '#fff' }}>{verificationResult.transaction_hash}</span></div>
+            <div>TRANSACTION HASH: <span style={{ color: 'var(--text-main)' }}>{verificationResult.transaction_hash}</span></div>
             <div>STATUS: <span style={{ color: 'var(--success-emerald)', fontWeight: 700 }}>{verificationResult.integrity_status}</span></div>
           </div>
         </div>
@@ -110,7 +110,7 @@ export default function BlockchainAudit() {
 
       {/* Ledger Block List */}
       <div className="cyber-card">
-        <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: '#fff', marginBottom: '1.25rem' }}>
+        <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--text-main)', marginBottom: '1.25rem' }}>
           Blockchain Audit Trail Transactions
         </h3>
 
