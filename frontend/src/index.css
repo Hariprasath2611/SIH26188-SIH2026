@@ -111,18 +111,18 @@ button {
   border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 1.5rem;
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.08);
   backdrop-filter: blur(10px);
   transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
 .cyber-card:hover {
-  border-color: rgba(255, 255, 255, 0.15);
+  border-color: var(--border-glow);
 }
 
 .cyber-card.glow {
   border-color: var(--border-glow);
-  box-shadow: 0 0 20px rgba(0, 242, 254, 0.08);
+  box-shadow: 0 0 20px rgba(2, 132, 199, 0.12);
 }
 
 /* Status Badges */
@@ -139,27 +139,27 @@ button {
 }
 
 .badge-low {
-  background: rgba(16, 185, 129, 0.15);
+  background: rgba(16, 185, 129, 0.12);
   color: var(--success-emerald);
   border: 1px solid rgba(16, 185, 129, 0.3);
 }
 
 .badge-medium {
-  background: rgba(245, 158, 11, 0.15);
+  background: rgba(245, 158, 11, 0.12);
   color: var(--warning-amber);
   border: 1px solid rgba(245, 158, 11, 0.3);
 }
 
 .badge-high {
-  background: rgba(239, 68, 68, 0.15);
+  background: rgba(239, 68, 68, 0.12);
   color: var(--danger-red);
   border: 1px solid rgba(239, 68, 68, 0.3);
 }
 
 .badge-cyan {
-  background: rgba(0, 242, 254, 0.12);
+  background: rgba(2, 132, 199, 0.12);
   color: var(--primary-cyan);
-  border: 1px solid rgba(0, 242, 254, 0.3);
+  border: 1px solid rgba(2, 132, 199, 0.3);
 }
 
 /* Buttons */
@@ -176,14 +176,14 @@ button {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
-  color: #040914;
-  box-shadow: 0 4px 15px rgba(0, 242, 254, 0.25);
+  background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(2, 132, 199, 0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(0, 242, 254, 0.4);
+  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.4);
 }
 
 .btn-secondary {
@@ -194,7 +194,7 @@ button {
 
 .btn-secondary:hover {
   background: var(--bg-card-hover);
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: var(--primary-cyan);
 }
 
 .btn-outline-danger {
@@ -223,7 +223,7 @@ button {
 }
 
 .data-table th {
-  background: rgba(15, 23, 42, 0.9);
+  background: var(--bg-card-hover);
   color: var(--text-muted);
   font-weight: 600;
   padding: 1rem;
@@ -235,12 +235,12 @@ button {
 
 .data-table td {
   padding: 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid var(--border-color);
   color: var(--text-main);
 }
 
 .data-table tr:hover {
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--bg-card-hover);
 }
 
 /* Form Inputs */
