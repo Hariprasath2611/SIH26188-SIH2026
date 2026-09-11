@@ -1,12 +1,12 @@
 import React from 'react';
-import { Shield, ShieldAlert, User, LogOut, CheckCircle2 } from 'lucide-react';
+import { Shield, LogOut, CheckCircle2, Sun, Moon } from 'lucide-react';
 
-export default function Navbar({ user, onLogout }) {
+export default function Navbar({ user, onLogout, theme, onToggleTheme }) {
   return (
     <header style={{
       height: '70px',
       borderBottom: '1px solid var(--border-color)',
-      background: 'rgba(15, 23, 42, 0.85)',
+      background: 'var(--bg-card)',
       backdropFilter: 'blur(12px)',
       display: 'flex',
       alignItems: 'center',
@@ -22,16 +22,16 @@ export default function Navbar({ user, onLogout }) {
           width: '38px',
           height: '38px',
           borderRadius: '10px',
-          background: 'linear-gradient(135deg, #00f2fe 0%, #3b82f6 100%)',
+          background: 'linear-gradient(135deg, #0284c7 0%, #2563eb 100%)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          boxShadow: '0 0 15px rgba(0, 242, 254, 0.3)'
+          boxShadow: '0 0 15px rgba(2, 132, 199, 0.3)'
         }}>
-          <Shield size={22} color="#040914" />
+          <Shield size={22} color="#ffffff" />
         </div>
         <div>
-          <div style={{ fontSize: '1.15rem', fontWeight: 800, letterSpacing: '-0.02em', color: '#fff' }}>
+          <div style={{ fontSize: '1.15rem', fontWeight: 800, letterSpacing: '-0.02em', color: 'var(--text-main)' }}>
             IDShield <span style={{ color: 'var(--primary-cyan)' }}>AI</span>
           </div>
           <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
@@ -62,9 +62,9 @@ export default function Navbar({ user, onLogout }) {
           alignItems: 'center',
           gap: '0.4rem',
           fontSize: '0.8rem',
-          background: 'rgba(0, 242, 254, 0.1)',
+          background: 'rgba(2, 132, 199, 0.1)',
           color: 'var(--primary-cyan)',
-          border: '1px solid rgba(0, 242, 254, 0.25)',
+          border: '1px solid rgba(2, 132, 199, 0.25)',
           padding: '0.3rem 0.75rem',
           borderRadius: '20px'
         }}>
@@ -73,10 +73,28 @@ export default function Navbar({ user, onLogout }) {
         </div>
       </div>
 
-      {/* Right Officer Profile */}
+      {/* Right Officer Profile & Theme Toggle */}
       <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+        <button
+          onClick={onToggleTheme}
+          title={`Switch to ${theme === 'light' ? 'Dark' : 'Light'} Mode`}
+          style={{
+            background: 'var(--bg-surface)',
+            border: '1px solid var(--border-color)',
+            color: 'var(--primary-cyan)',
+            padding: '0.55rem',
+            borderRadius: '8px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            transition: 'all 0.2s ease'
+          }}
+        >
+          {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
+        </button>
+
         <div style={{ textAlign: 'right' }}>
-          <div style={{ fontSize: '0.85rem', fontWeight: 600, color: '#fff' }}>
+          <div style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-main)' }}>
             {user?.name || "Inspector Rajesh Kumar"}
           </div>
           <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>
@@ -91,7 +109,7 @@ export default function Navbar({ user, onLogout }) {
             background: 'rgba(239, 68, 68, 0.1)',
             border: '1px solid rgba(239, 68, 68, 0.25)',
             color: 'var(--danger-red)',
-            padding: '0.5rem',
+            padding: '0.55rem',
             borderRadius: '8px',
             display: 'flex',
             alignItems: 'center',
