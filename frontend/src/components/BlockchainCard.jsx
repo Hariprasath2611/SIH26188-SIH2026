@@ -9,7 +9,7 @@ export function BlockchainCard({ record }) {
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1rem' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
           <Database size={22} color="var(--primary-cyan)" />
-          <span style={{ fontSize: '1.1rem', fontWeight: 700, color: '#fff' }}>
+          <span style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--text-main)' }}>
             Blockchain Audit Ledger Proof
           </span>
         </div>
@@ -77,7 +77,7 @@ export function ReportViewer({ caseData, blockchainData, onPrint }) {
   if (!caseData) return null;
 
   return (
-    <div className="cyber-card" style={{ background: '#0b1120', color: '#fff', border: '1px solid var(--border-glow)' }}>
+    <div className="cyber-card" style={{ background: '#0b1120', color: 'var(--text-main)', border: '1px solid var(--border-glow)' }}>
       {/* Official Government Header */}
       <div style={{
         display: 'flex',

@@ -269,7 +269,7 @@ export default function NewScreening() {
           <div className="cyber-card">
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.25rem' }}>
               <div>
-                <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: '#fff' }}>
+                <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--text-main)' }}>
                   Step 3 — AI Extracted OCR Data
                 </h3>
                 <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
@@ -363,7 +363,7 @@ export default function NewScreening() {
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '1.5rem' }}>
             {/* Risk Gauge */}
             <div className="cyber-card">
-              <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: '#fff', marginBottom: '1rem', textAlign: 'center' }}>
+              <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--text-main)', marginBottom: '1rem', textAlign: 'center' }}>
                 AI Explainable Risk Score
               </h3>
               <RiskGauge score={riskAssessment?.risk_score || 14} level={riskAssessment?.risk_level || 'LOW'} />
@@ -389,7 +389,7 @@ export default function NewScreening() {
 
             {/* Explainable Reasons */}
             <div className="cyber-card">
-              <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: '#fff', marginBottom: '1rem' }}>
+              <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--text-main)', marginBottom: '1rem' }}>
                 Why This Result?
               </h3>
               
