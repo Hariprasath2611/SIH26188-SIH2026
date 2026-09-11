@@ -11,10 +11,23 @@ import BlockchainAudit from './pages/BlockchainAudit';
 import Profile from './pages/Profile';
 
 export default function App() {
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem('idshield_theme') || 'light';
+  });
+
   const [user, setUser] = useState(() => {
     const saved = localStorage.getItem('idshield_user');
     return saved ? JSON.parse(saved) : null;
   });
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('idshield_theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prev => prev === 'light' ? 'dark' : 'light');
+  };
 
   const handleLoginSuccess = (userData) => {
     setUser(userData);
@@ -30,7 +43,7 @@ export default function App() {
     return (
       <Router>
         <Routes>
-          <Route path="/login" element={<Login onLoginSuccess={handleLoginSuccess} />} />
+          <Route path="/login" element={<Login onLoginSuccess={handleLoginSuccess} theme={theme} onToggleTheme={toggleTheme} />} />
           <Route path="*" element={<Navigate to="/login" replace />} />
         </Routes>
       </Router>
@@ -42,7 +55,7 @@ export default function App() {
       <div className="app-container">
         <Sidebar />
         <div className="main-content">
-          <Navbar user={user} onLogout={handleLogout} />
+          <Navbar user={user} onLogout={handleLogout} theme={theme} onToggleTheme={toggleTheme} />
           <Routes>
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/new-screening" element={<NewScreening />} />
